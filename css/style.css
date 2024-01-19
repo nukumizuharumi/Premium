@@ -1,0 +1,331 @@
+/* 初期設定 */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*デスクトップファースト 最小768以上 */
+@media screen and (min-width: 768px) {
+  input {
+    display: none;
+  }
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  position: relative;
+}
+html {
+  font-size: 16px;
+  font-family: 'Radio Canada','Noto Sans JP';
+}
+
+/*PC版↓ */
+/* ヘッダー */
+.header-area {
+  position: fixed;
+  width: 200px;
+  background: #fff;
+  height: 100vh;
+  z-index: 100;
+}
+
+.logo-top {
+  display: block;
+  width: 200px;
+  padding: 32px 16px;
+  margin-bottom: 64px;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-nav li a {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 1rem;
+}
+
+.header-nav-icons {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  display: flex;
+  justify-content: center;
+}
+.header-nav-icons li a {
+  padding: 8px;
+}
+
+/* メインビジュアル */
+main {
+  margin-left: 200px;
+  width: calc(100%-200px);
+}
+
+.first-view {
+  width: 100%;
+  /* height: calc(100vh - 60px); */
+  height: 100vh;
+  background: url("../img/mv-bg@2x.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.main-visual {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 80vh;
+}
+
+.text-area {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  width: fit-content;
+}
+
+.text-area time {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  background-color: #fff;
+}
+.top-title {
+  background-color: #fff;
+  display: block;
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  font-size: min(6.5vw, 2rem);
+}
+.first-view time{
+  font-size: min(4.5vw, 16px);
+}
+
+/* アニメーション */
+
+.text-area {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes long {
+  10% {width: 10%;
+}
+  50% {width: 50%;
+  }
+  100% {
+    width: auto;
+  }
+}
+
+.text-area {
+  animation: long 2.0s linear 0s 1 forwards;
+}
+
+
+.header-nav li a .line {
+  background-image: linear-gradient(#000,#fff);
+  background-size: 0 1px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  transition: background-size 1.0s ease;
+}
+
+.header-nav li a:hover .line {
+  background-size: 100% 1px;
+  background-position: bottom left;
+}
+
+/* バックナンバー */
+.back-num {
+  background-color: #f8f8f8;
+}
+
+.num-title {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.num-sub-title {
+  font-size: 0.8em;
+}
+
+.back-num div {
+  padding: 2rem;
+}
+
+.magazine {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mgz-item {
+  width: 50%;
+  padding: 48px;
+}
+
+.mgz-item h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.mgz-item time {
+  display: inline-block;
+  padding-top: 4em;
+  font-size: 0.8em;
+  line-height: 1.5rem;
+}
+
+.magazine img {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 1px 1px 10px rgba(000, 000, 000, 0.8);
+}
+.mgz1 {
+  background-color: #ecf4f9;
+}
+.mgz2 {
+  background-color: #fbf3d2;
+}
+.mgz3 {
+  background-color: #f9f2eb;
+}
+.mgz4 {
+  background-color: #fae8c2;
+}
+.mgz5 {
+  background-color: #e2efe7;
+}
+.mgz6 {
+  background-color: #f2f5fb;
+}
+
+
+/* PC版↑ */
+
+/* SP版 */
+@media screen and (max-width: 768px) {
+  main {
+    margin: 0;
+  }
+  .header-area {
+    position: fixed;
+    width: 100%;
+    height: auto;
+  }
+
+
+  .logo-top {
+    width: 30vw;
+    margin: 0 auto;
+    padding: 0;
+    height: 60px;
+  }
+
+.list {
+  padding-top: 2em;
+  background-color: #fff;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  transition: transform 1.0s ease;
+  transform: translateX(200%);
+}
+
+  .header-area ul {
+    align-items: center;
+    height: 100%;
+    position: static;
+  }
+
+  .header-nav-icons {
+    padding: 4rem;
+  }
+
+  /* ハンバーガー */
+.box-hidden {
+  display: none;
+}
+
+  .open {
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    z-index: 200;
+    background: url(../img/ico-nav.svg) no-repeat;
+    background-size: cover;
+    top: 16px;
+    right: 16px;
+
+  }
+
+
+  /* ナビゲーションの開閉box */
+#sp-nav:checked ~ .open {
+  display: none;
+}
+#sp-nav:checked ~ .close {
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    z-index: 200;
+    background: url(../img/ico-nav-close.svg) no-repeat;
+    background-size: cover;
+    top: 16px;
+    right: 16px;
+  }
+
+#sp-nav:checked ~ .list {
+  transform: translateX(0%);
+}
+
+
+/* メインビジュアル */
+.first-view {
+    position: relative;
+  }
+  .main-visual {
+    width: 50%;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+
+  /* バックナンバー */
+  .back-num {
+    background-color: #f8f8f8;
+  }
+  .num-title {
+    font-size: 1rem;
+  }
+
+  .magazine {
+    flex-direction: column;
+  }
+  .mgz-item {
+    width: 100%;
+  }
+
+}
