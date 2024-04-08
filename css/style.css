@@ -26,7 +26,7 @@ body {
 }
 html {
   font-size: 16px;
-  font-family: 'Radio Canada','Noto Sans JP';
+  font-family: "Radio Canada", "Noto Sans JP";
 }
 
 /*PC版↓ */
@@ -116,7 +116,7 @@ main {
   font-weight: 400;
   font-size: min(6.5vw, 2rem);
 }
-.first-view time{
+.first-view time {
   font-size: min(4.5vw, 16px);
 }
 
@@ -128,26 +128,27 @@ main {
 }
 
 @keyframes long {
-  10% {width: 10%;
-}
-  50% {width: 50%;
+  10% {
+    width: 10%;
+  }
+  50% {
+    width: 50%;
   }
   100% {
-    width: auto;
+    width: 70%;
   }
 }
 
 .text-area {
-  animation: long 2.0s linear 0s 1 forwards;
+  animation: long 2s linear 0s 1 forwards;
 }
 
-
 .header-nav li a .line {
-  background-image: linear-gradient(#000,#fff);
+  background-image: linear-gradient(#000, #fff);
   background-size: 0 1px;
   background-position: bottom right;
   background-repeat: no-repeat;
-  transition: background-size 1.0s ease;
+  transition: background-size 1s ease;
 }
 
 .header-nav li a:hover .line {
@@ -219,7 +220,6 @@ main {
   background-color: #f2f5fb;
 }
 
-
 /* PC版↑ */
 
 /* SP版 */
@@ -233,7 +233,6 @@ main {
     height: auto;
   }
 
-
   .logo-top {
     width: 30vw;
     margin: 0 auto;
@@ -241,16 +240,16 @@ main {
     height: 60px;
   }
 
-.list {
-  padding-top: 2em;
-  background-color: #fff;
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  height: 100vh;
-  transition: transform 1.0s ease;
-  transform: translateX(200%);
-}
+  .list {
+    padding-top: 2em;
+    background-color: #fff;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    transition: transform 1s ease;
+    transform: translateX(200%);
+  }
 
   .header-area ul {
     align-items: center;
@@ -263,9 +262,9 @@ main {
   }
 
   /* ハンバーガー */
-.box-hidden {
-  display: none;
-}
+  .box-hidden {
+    display: none;
+  }
 
   .open {
     display: block;
@@ -277,15 +276,13 @@ main {
     background-size: cover;
     top: 16px;
     right: 16px;
-
   }
 
-
   /* ナビゲーションの開閉box */
-#sp-nav:checked ~ .open {
-  display: none;
-}
-#sp-nav:checked ~ .close {
+  #sp-nav:checked ~ .open {
+    display: none;
+  }
+  #sp-nav:checked ~ .close {
     display: block;
     width: 32px;
     height: 32px;
@@ -297,13 +294,12 @@ main {
     right: 16px;
   }
 
-#sp-nav:checked ~ .list {
-  transform: translateX(0%);
-}
+  #sp-nav:checked ~ .list {
+    transform: translateX(0%);
+  }
 
-
-/* メインビジュアル */
-.first-view {
+  /* メインビジュアル */
+  .first-view {
     position: relative;
   }
   .main-visual {
@@ -311,7 +307,6 @@ main {
     height: auto;
     margin-top: 2rem;
   }
-
 
   /* バックナンバー */
   .back-num {
@@ -327,7 +322,6 @@ main {
   .mgz-item {
     width: 100%;
   }
-
 }
 
 /*  */
